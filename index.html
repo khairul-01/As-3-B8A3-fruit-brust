@@ -32,8 +32,8 @@
       }
     </script>
 </head>
-<body class="container mx-auto lato">
-   <header>
+<body>
+   <header class="container mx-auto lato">
       <!-- navbar section -->
       <nav>
          <div class="navbar bg-[#F85559] rounded-full my-12">
@@ -146,9 +146,11 @@
        </div>
        <!-- carousal or slider section end -->
    </header>
-   <main>
+   <!-- Main section -->
+   <main class="container mx-auto lato">
       <!-- Deal of the day section start  -->
-      <section class="my-36">
+      <section class="my-32 space-y-12">
+         <!-- Deal title section -->
          <div class="flex justify-between items-center">
             <div>
                <h1 class="text-5xl">Deal of the day</h1>
@@ -181,8 +183,102 @@
                </div>
              </div>
          </div>
+         <!-- Deal card container -->
+         <div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                 <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center space-y-3">
+                 <h2 class="card-title text-2xl">12.90$ - 18.85$</h2>
+                 <p>Apples</p>
+                 <!-- ratings -->
+                 <div class="rating rating-sm rating-half">
+                  <input type="radio" name="rating-10" class="rating-hidden" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-1" checked />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10" class="bg-red-500 mask mask-star-2 mask-half-2" />
+                </div>
+                <!-- modal -->
+                 <div class="">
+                   <!-- Open the modal using ID.showModal() method -->
+                     <button class="btn lowercase" onclick="my_modal_5.showModal()">details</button>
+                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                     <form method="dialog" class="modal-box">
+                        <figure class="px-10 pt-10">
+                           <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                         </figure>
+                         <div class="card-body items-center text-center space-y-3">
+                           <h2 class="card-title text-2xl">12.90$ - 18.85$</h2>
+                           <p>Apples</p>
+                           <!-- ratings -->
+                           <div class="rating rating-sm rating-half">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                          </div>
+                        <div class="modal-action">
+                           <!-- if there is a button in form, it will close the modal -->
+                           <button class="btn">Close</button>
+                           <button class="btn">Buy Now</button>
+                        </div>
+                     </form>
+                     </dialog>
+                 </div>
+               </div>
+             </div>
+         </div>
+         <!-- Deal button -->
+         <div class="flex justify-center">
+            <button class="btn btn-error">Shop All</button>
+         </div>
       </section>
       <!-- Deal of the day section end  -->
+      <!-- Meet the team section start -->
+      <section>
+         <div class="hero min-h-screen" style="background-image: url(./images/banner1.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="">
+                <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+                <p class="mb-5 max-w-2xl">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <!-- team member profile -->
+                <div>
+                  <div class="card w-96 shadow-xl">
+                     <figure class="px-10 pt-10">
+                       <img src="/images/member1.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title text-2xl">Awlad Hossain</h2>
+                       <p>Fruits Expert</p>
+                       <div class="card-actions">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                       </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Meet the team section end -->
    </main>
    <footer>
 
