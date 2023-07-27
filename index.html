@@ -39,27 +39,33 @@
       <nav>
          <div class="navbar bg-[#F85559] rounded-full my-12">
             <div class="navbar-start">
-               <ul class="menu menu-horizontal px-1 text-white">
-                  <li><a>Home</a></li>
-                  <li><a>About Us</a></li>
-                  <li><a>Shop</a></li>
-                  <li><a>All Fruits</a></li>
-                </ul>
+               <div class="hidden md:flex">
+                  <ul class="menu menu-horizontal px-1 text-white ">
+                     <li><a>Home</a></li>
+                     <li><a>About Us</a></li>
+                     <li><a>Shop</a></li>
+                     <li><a>All Fruits</a></li>
+                   </ul>
+               </div>
+               <div class="flex items-center md:hidden">
+                  <img src="./images/logo.png" alt="">
+                  <a class="btn btn-ghost normal-case text-4xl text-white">Fruit Burst</a>
+               </div>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center hidden md:flex">
                <div class="flex items-center">
                   <img src="./images/logo.png" alt="">
                   <a class="btn btn-ghost normal-case text-4xl text-white">Fruit Burst</a>
                </div>
             </div>
             <div class="navbar-end">
-               <div class="relative">
+               <div class="hidden relative md:grid">
                   <input class="py-4 rounded-full px-7 w-72" type="search" name="" id="" placeholder="Search Here">
                   <i class="fa-solid fa-magnifying-glass text-2xl absolute right-4 top-3"></i>
                </div>
               
-              <div class="dropdown hidden">
-               <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <div class="dropdown">
+               <label tabindex="0" class="btn btn-ghost md:hidden">
                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                </label>
                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -147,7 +153,7 @@
               </div>
             </div>
           </div>
-          <div class="max-w-6xl mx-auto grid grid-cols-5 -mt-24 z-50 relative bg-white rounded-lg shadow-lg h-48 items-center">
+          <div class="max-w-6xl mx-auto hidden md:grid grid-cols-5 -mt-24 z-50 relative bg-white rounded-lg shadow-lg h-48 items-center">
             <div class="flex flex-col items-center">
                <img src="./images/fruit1.png" alt="">
                <caption class="text-center">Strawberry</caption>
@@ -176,15 +182,15 @@
    <!-- Main section -->
    <main class="container mx-auto lato">
       <!-- Deal of the day section start  -->
-      <section class="my-32 space-y-12">
+      <section class="my-32 space-y-12 flex flex-col items-center justify-center">
          <!-- Deal title section -->
          <div class="flex flex-col justify-center lg:flex-row lg:justify-between items-center">
             <div class="space-y-6">
-               <h1 class="text-5xl">Deal of the day</h1>
-               <p class="max-w-2xl">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+               <h1 class="text-5xl text-center md:text-left">Deal of the day</h1>
+               <p class="max-w-2xl text-center md: text-left">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
             <!-- Time count part -->
-            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max p-2 justify-center">
                <div class="flex flex-col">
                   <div class="flex items-center">
                      <span class="countdown font-mono text-5xl">
@@ -470,7 +476,7 @@
       <!-- Deal of the day section end  -->
       <!-- Meet the team section start -->
       <section>
-         <div class="hero min-h-[690px]" style="background-image: url(./images/banner1.png);">
+         <div class="hero min-h-[690px] rounded-lg" style="background-image: url(./images/banner1.png);">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="flex flex-col justify-center items-center">
@@ -542,14 +548,84 @@
           </div>
       </section>
       <!-- Meet the team section end -->
+
+      <!-- Why choose us section start -->
+      <section class="my-32 space-y-12">
+         <div class="text-center space-y-6">
+            <h1 class="text-5xl">Why Choose Us</h1>
+            <p class="max-w-2xl mx-auto text-slate-400">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+         </div>
+         <!-- Choose us container -->
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- choose 1 -->
+            <div class="space-y-8">
+               <div class="flex gap-6">
+                  <i class="fa-solid fa-users-line mt-8 text-2xl rounded-full"></i>
+                  <div class="space-y-2">
+                     <h3 class="text-2xl text-[#121212] font-extrabold">Dedicated Team</h3>
+                     <hr class="w-32 border-black">
+                     <p class="text-slate-500">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  </div>
+               </div>
+               <div class="flex gap-6">
+                  <i class="fa-solid fa-users-line mt-8 text-2xl rounded-full"></i>
+                  <div class="space-y-2">
+                     <h3 class="text-2xl text-[#121212] font-extrabold">Fresh is Best</h3>
+                     <hr class="w-32 border-black">
+                     <p class="text-slate-500">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  </div>
+               </div>
+               <div class="flex gap-6">
+                  <i class="fa-solid fa-users-line mt-8 text-2xl rounded-full"></i>
+                  <div class="space-y-2">
+                     <h3 class="text-2xl text-[#121212] font-extrabold">Gift Certificates</h3>
+                     <hr class="w-32 border-black">
+                     <p class="text-slate-500">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  </div>
+               </div>
+             </div> 
+             <!-- choose 2 -->
+             <div>
+               <img src="./images/whychoose1.png" alt="">
+             </div> 
+             <!-- choose 3 -->
+             <div class="space-y-8">
+               <div class="flex gap-6 text-end">
+                  <div class="space-y-2 flex flex-col items-end">
+                     <h3 class="text-2xl text-[#121212] font-extrabold">Integrated Supplier</h3>
+                     <hr class="w-32 border-black text-end">
+                     <p class="text-slate-500">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  </div>
+                  <i class="fa-solid fa-users-line mt-8 text-2xl rounded-full"></i>
+               </div>
+               <div class="flex gap-6 text-end">
+                  <div class="space-y-2 flex flex-col items-end">
+                     <h3 class="text-2xl text-[#121212] font-extrabold">Sustainable Practice</h3>
+                     <hr class="w-32 border-black text-end">
+                     <p class="text-slate-500">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  </div>
+                  <i class="fa-solid fa-users-line mt-8 text-2xl rounded-full"></i>
+               </div>
+               <div class="flex gap-6 text-end">
+                  <div class="space-y-2 flex flex-col items-end">
+                     <h3 class="text-2xl text-[#121212] font-extrabold">The Benefits Only</h3>
+                     <hr class="w-32 border-black text-end">
+                     <p class="text-slate-500">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  </div>
+                  <i class="fa-solid fa-users-line mt-8 text-2xl rounded-full"></i>
+               </div>
+             </div> 
+         </div>
+       </section>
+      <!-- Why choose us section end -->
    </main>
    <!-- Footer section -->
-   <footer class="footer footer-center p-10 bg-[#121212] text-white text-base-content mt-32">
+   <footer class="footer footer-center p-10 bg-[#121212] text-white text-base-content">
       <div class="flex items-center">
          <img src="./images/logo.png" alt="">
          <a class="btn btn-ghost normal-case text-4xl text-white">Fruit Burst</a>
       </div>
-      <div class="grid grid-flow-col gap-4">
+      <div class="flex flex-wrap justify-center gap-4">
         <a class="link link-hover">Home</a> 
         <a class="link link-hover">About us</a> 
         <a class="link link-hover">Shop</a> 
